@@ -1,6 +1,6 @@
 # SRE Platform Demo
 
-A production-style SRE demo project showcasing containerization, observability, and service reliability concepts using Python, Docker, Prometheus, and Grafana.
+A production-style SRE demo project showcasing containerization, observability, and service reliability concepts using Python, Docker, Prometheus, CI/CD and Grafana.
 
 ---
 
