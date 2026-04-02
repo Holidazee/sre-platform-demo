@@ -1,6 +1,6 @@
 # sre-platform-demo
 
-A simple Flask app containerized with Docker to demonstrate basic SRE / DevOps skills.
+SRE demo project showcasing containerization, monitoring, CI/CD, and service reliability concepts using Python, Docker, and Prometheus
 
 ## Features
 
