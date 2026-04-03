@@ -128,3 +128,14 @@ Taylor Burris
 ## Notes
 
 This project is designed to demonstrate practical SRE skills and serve as a foundation for more advanced infrastructure and reliability engineering concepts.
+
+## 📊 Monitoring Dashboard
+
+### Grafana Dashboard
+![Dashboard](screenshots/dashboard-overview.png)
+
+### Prometheus Targets
+![Targets](screenshots/prometheus-targets.png)
+
+### Metrics Endpoint
+![Metrics](screenshots/metrics-endpoint.png)
