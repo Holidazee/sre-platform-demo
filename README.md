@@ -4,6 +4,22 @@ A production-style SRE demo project showcasing containerization, observability, 
 
 ---
 
+## 📊 Monitoring Dashboard
+
+### Grafana Dashboard
+![Dashboard](screenshots/dashboard-overview.png)
+
+### Prometheus Targets
+![Targets](screenshots/prometheus-targets.png)
+
+### Metrics Endpoint
+![Metrics](screenshots/metrics-endpoint.png)
+
+---
+
+### 📁 Dashboard Configuration
+Grafana dashboard export is available in `grafana/sre-dashboard.json`.
+
 ## Overview
 
 This project simulates a real-world service environment by combining a containerized application with a full monitoring stack. It demonstrates core Site Reliability Engineering (SRE) principles including health checks, logging, metrics collection, and failure simulation.
