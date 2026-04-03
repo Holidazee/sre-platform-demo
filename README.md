@@ -1,6 +1,8 @@
 # 🚀 SRE Platform Demo
 
-A hands-on **Site Reliability Engineering (SRE)** demo project showcasing containerization, monitoring, observability, and CI/CD using Python, Docker, Prometheus, and Grafana.
+This project demonstrates how to **instrument, monitor, and visualize application health** using industry-standard observability tools.
+
+A hands-on **Site Reliability Engineering (SRE)** demo showcasing containerization, monitoring, observability, and CI/CD using Python, Docker, Prometheus, and Grafana.
 
 ---
 
@@ -40,7 +42,7 @@ This project simulates a production-style service and demonstrates core SRE conc
 * Real-time monitoring using Grafana dashboards
 * Containerized services with Docker Compose
 * CI/CD pipeline using GitHub Actions
-* Basic service reliability signals (traffic, latency, availability)
+* Core service reliability signals (SLIs): traffic, latency, and availability
 
 ---
 
@@ -67,10 +69,10 @@ This project simulates a production-style service and demonstrates core SRE conc
 
 ## 📈 Metrics Collected
 
-* Total Requests
+* Request Volume
 * Request Rate (requests/sec)
 * Latency (average & P95)
-* Service Uptime
+* Service Availability (uptime)
 
 ---
 
@@ -129,7 +131,7 @@ This project includes a GitHub Actions pipeline that:
 
 * Observability (metrics collection & visualization)
 * Monitoring (Prometheus + Grafana)
-* Service reliability indicators (SLIs)
+* Service Level Indicators (SLIs)
 * Containerized environments
 * Automated workflows (CI/CD)
 
@@ -147,4 +149,3 @@ This project includes a GitHub Actions pipeline that:
 ## 👨‍💻 Author
 
 Built as a hands-on SRE/DevOps portfolio project.
-
