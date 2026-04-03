@@ -45,12 +45,15 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
         "textMode": "auto"
       },
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "expr": "app_requests_total",
@@ -84,12 +87,15 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["lastNotNull"],
+          "calcs": [
+            "lastNotNull"
+          ],
           "fields": "",
           "values": false
         },
         "textMode": "auto"
       },
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "expr": "app_errors_total",
@@ -126,6 +132,7 @@
           "mode": "single"
         }
       },
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "expr": "rate(app_requests_total[1m])",
@@ -142,7 +149,7 @@
       },
       "fieldConfig": {
         "defaults": {
-          "unit": "s"
+          "unit": "ops"
         },
         "overrides": []
       },
@@ -162,6 +169,44 @@
           "mode": "single"
         }
       },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "expr": "rate(app_errors_total[1m])",
+          "refId": "A"
+        }
+      ],
+      "title": "Error Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "10.4.2",
       "targets": [
         {
           "expr": "rate(app_request_latency_seconds_sum[1m]) / rate(app_request_latency_seconds_count[1m])",
@@ -175,7 +220,12 @@
   "refresh": "5s",
   "schemaVersion": 39,
   "style": "dark",
-  "tags": ["sre", "demo", "prometheus", "grafana"],
+  "tags": [
+    "sre",
+    "demo",
+    "prometheus",
+    "grafana"
+  ],
   "templating": {
     "list": []
   },
@@ -187,6 +237,6 @@
   "timezone": "browser",
   "title": "SRE Demo Dashboard",
   "uid": "sre-demo-dashboard",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
