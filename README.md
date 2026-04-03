@@ -1,146 +1,150 @@
-# SRE Platform Demo
+# 🚀 SRE Platform Demo
 
-A production-style SRE demo project showcasing containerization, observability, and service reliability concepts using Python, Docker, Prometheus, CI/CD and Grafana.
+A hands-on **Site Reliability Engineering (SRE)** demo project showcasing containerization, monitoring, observability, and CI/CD using Python, Docker, Prometheus, and Grafana.
 
 ---
 
 ## 📊 Monitoring Dashboard
 
 ### Grafana Dashboard
+
 ![Dashboard](screenshots/dashboard-overview.png)
 
 ### Prometheus Targets
+
 ![Targets](screenshots/prometheus-targets.png)
 
 ### Metrics Endpoint
+
 ![Metrics](screenshots/metrics-endpoint.png)
 
 ---
 
-### 📁 Dashboard Configuration
-Grafana dashboard export is available in `grafana/sre-dashboard.json`.
+## 📁 Dashboard Configuration
 
-## Overview
+Grafana dashboard export is available at:
 
-This project simulates a real-world service environment by combining a containerized application with a full monitoring stack. It demonstrates core Site Reliability Engineering (SRE) principles including health checks, logging, metrics collection, and failure simulation.
+```
+monitoring/grafana/sre-dashboard.json
+```
 
----
-
-## Tech Stack
-
-* **Python (Flask)** — lightweight web service
-* **Docker & Docker Compose** — containerization and orchestration
-* **Prometheus** — metrics collection and scraping
-* **Grafana** — data visualization and dashboards
+This can be imported directly into Grafana to recreate the dashboard.
 
 ---
 
-## Features
+## 🧠 Overview
 
-* ✅ Containerized microservice
-* ✅ Health check endpoint (`/health`)
-* ✅ Error simulation endpoint (`/error`)
-* ✅ Metrics endpoint (`/metrics`)
-* ✅ Request counting and latency tracking
-* ✅ Prometheus scraping configuration
-* ✅ Grafana integration for visualization
+This project simulates a production-style service and demonstrates core SRE concepts:
 
----
-
-## Service Endpoints
-
-| Endpoint   | Description                              |
-| ---------- | ---------------------------------------- |
-| `/`        | Main service endpoint                    |
-| `/health`  | Health check for uptime monitoring       |
-| `/error`   | Simulated failure endpoint (returns 500) |
-| `/metrics` | Prometheus metrics endpoint              |
+* Application instrumentation with Prometheus metrics
+* Real-time monitoring using Grafana dashboards
+* Containerized services with Docker Compose
+* CI/CD pipeline using GitHub Actions
+* Basic service reliability signals (traffic, latency, availability)
 
 ---
 
-## Observability Stack
+## ⚙️ Tech Stack
 
-* **Prometheus** scrapes application metrics every 5 seconds
-* **Grafana** provides dashboards for monitoring:
-
-  * Request volume
-  * Error rates
-  * Latency trends
+* Python (Flask)
+* Docker & Docker Compose
+* Prometheus
+* Grafana
+* GitHub Actions (CI/CD)
 
 ---
 
-## Getting Started
+## 🔌 Application Endpoints
 
-### 1. Clone the Repository
+| Endpoint   | Description                 |
+| ---------- | --------------------------- |
+| `/`        | Main application route      |
+| `/health`  | Health check endpoint       |
+| `/metrics` | Prometheus metrics endpoint |
+| `/error`   | Simulated error endpoint    |
+
+---
+
+## 📈 Metrics Collected
+
+* Total Requests
+* Request Rate (requests/sec)
+* Latency (average & P95)
+* Service Uptime
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Holidazee/sre-platform-demo.git
 cd sre-platform-demo
 ```
 
-### 2. Run the Stack
+### 2. Start the services
 
 ```bash
-docker compose up --build
+docker-compose up --build
 ```
 
 ---
 
-## Access Services
+## 🌐 Access Services
 
-* **Application:** http://localhost:5000
-* **Prometheus:** http://localhost:9090
-* **Grafana:** http://localhost:3000
-
-Grafana default login:
-
-```
-username: admin
-password: admin
-```
+* App: http://localhost:5000
+* Prometheus: http://localhost:9090
+* Grafana: http://localhost:3000
 
 ---
 
-## Testing the System
+## 🧪 Testing the System
 
 Generate traffic:
 
-* Visit `/` for normal requests
-* Visit `/health` for health checks
-* Visit `/error` to simulate failures
+```bash
+curl http://localhost:5000
+```
 
-Then view metrics in:
+Simulate errors:
 
-* Prometheus queries
-* Grafana dashboards
-
----
-
-## SRE Concepts Demonstrated
-
-* Service health monitoring
-* Observability and metrics instrumentation
-* Failure simulation and error tracking
-* Containerized deployment
-* System visibility through dashboards
+```bash
+curl http://localhost:5000/error
+```
 
 ---
 
-## Future Improvements
+## 🔁 CI/CD
 
-* CI/CD pipeline (GitHub Actions)
-* Alerting (Prometheus Alertmanager)
-* Kubernetes deployment
+This project includes a GitHub Actions pipeline that:
+
+* Runs tests
+* Lints code
+* Builds the application
+
+---
+
+## 📌 Key SRE Concepts Demonstrated
+
+* Observability (metrics collection & visualization)
+* Monitoring (Prometheus + Grafana)
+* Service reliability indicators (SLIs)
+* Containerized environments
+* Automated workflows (CI/CD)
+
+---
+
+## 🔮 Future Enhancements
+
+* Alerting (latency, downtime, error rate)
 * Distributed tracing
+* Logging integration (ELK or Loki)
+* Kubernetes deployment
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Taylor Burris
+Built as a hands-on SRE/DevOps portfolio project.
 
----
-
-## Notes
-
-This project is designed to demonstrate practical SRE skills and serve as a foundation for more advanced infrastructure and reliability engineering concepts.
