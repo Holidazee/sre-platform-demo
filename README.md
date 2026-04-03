@@ -2,7 +2,7 @@
 
 This project demonstrates how to **instrument, monitor, and visualize application health** using industry-standard observability tools.
 
-A hands-on **Site Reliability Engineering (SRE)** demo showcasing containerization, monitoring, observability, and CI/CD using Python, Docker, Prometheus, and Grafana.
+A hands-on **Site Reliability Engineering (SRE)** demo showcasing containerization, monitoring, observability, alerting, and CI/CD using Python, Docker, Prometheus, and Grafana.
 
 ---
 
@@ -22,11 +22,23 @@ A hands-on **Site Reliability Engineering (SRE)** demo showcasing containerizati
 
 ---
 
+## 🚨 Alerting
+
+The system includes alerting rules configured in Grafana to detect service health issues in real time.
+
+* Service downtime detection
+* High latency detection
+* Traffic drop detection
+
+![Alerts](screenshots/alerts.png)
+
+---
+
 ## 📁 Dashboard Configuration
 
 Grafana dashboard export is available at:
 
-```
+```text
 monitoring/grafana/sre-dashboard.json
 ```
 
@@ -40,6 +52,7 @@ This project simulates a production-style service and demonstrates core SRE conc
 
 * Application instrumentation with Prometheus metrics
 * Real-time monitoring using Grafana dashboards
+* Alerting based on service health conditions
 * Containerized services with Docker Compose
 * CI/CD pipeline using GitHub Actions
 * Core service reliability signals (SLIs): traffic, latency, and availability
@@ -131,6 +144,7 @@ This project includes a GitHub Actions pipeline that:
 
 * Observability (metrics collection & visualization)
 * Monitoring (Prometheus + Grafana)
+* Alerting (latency, downtime, traffic conditions)
 * Service Level Indicators (SLIs)
 * Containerized environments
 * Automated workflows (CI/CD)
@@ -139,7 +153,6 @@ This project includes a GitHub Actions pipeline that:
 
 ## 🔮 Future Enhancements
 
-* Alerting (latency, downtime, error rate)
 * Distributed tracing
 * Logging integration (ELK or Loki)
 * Kubernetes deployment
@@ -149,3 +162,4 @@ This project includes a GitHub Actions pipeline that:
 ## 👨‍💻 Author
 
 Built as a hands-on SRE/DevOps portfolio project.
+
